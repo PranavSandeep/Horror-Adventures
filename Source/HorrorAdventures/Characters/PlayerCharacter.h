@@ -38,6 +38,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 	UInventoryComponents* Inventory;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+	AActor* ActiveActor;
 
 
 
@@ -53,13 +56,23 @@ private:
 
 	void AddToInventory();
 
+	void SetActiveItem();
+
 	UPROPERTY(EditAnywhere)
 	float reach = 50;
 
 	UPROPERTY(EditAnywhere)
 	float GrabReach = 50;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USceneComponent* HoldPoint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory",  meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<class AItemActor> ItemActor;
+
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+
 
 	
 	

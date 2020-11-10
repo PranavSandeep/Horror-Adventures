@@ -36,14 +36,16 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnUse(ACharacter* CallingCharacter);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components",meta=(AllowPrivateAccess = "true"))
+	UStaticMeshComponent* Mesh;
+
 	
 	
 
 private:
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components",meta=(AllowPrivateAccess = "true"))
-	UStaticMeshComponent* Mesh;
-
+	
 	
 
 	

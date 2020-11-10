@@ -10,6 +10,7 @@
 #include "HorrorAdventures/Components/InventoryComponents.h"
 #include "HorrorAdventures/Actors/ItemActor.h"
 #include "DrawDebugHelpers.h"
+#include "Components/SceneComponent.h"
 #include "Physics/ImmediatePhysics/ImmediatePhysicsChaos/ImmediatePhysicsCore_Chaos.h"
 
 // Sets default values
@@ -18,6 +19,9 @@ APlayerCharacter::APlayerCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	HoldPoint = CreateDefaultSubobject<USceneComponent>(FName("Hold Point"));
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -74,6 +78,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 
 	PlayerInputComponent->BindAction("Add to inventory", IE_Pressed, this, &APlayerCharacter::AddToInventory);
+
+	PlayerInputComponent->BindAction("Get First Inventory Item", IE_Pressed, this, &APlayerCharacter::SetActiveItem);
 
 }
 
@@ -202,6 +208,42 @@ void APlayerCharacter::AddToInventory()
 				
 		}
 	}
+}
+
+void APlayerCharacter::SetActiveItem()
+{
+	if(Inventory->Inventory.IsValidIndex(0))
+	{
+		ActiveActor = Inventory->Inventory[0];
+
+		if(ActiveActor != nullptr)
+		{
+			AItemActor* FirstActor = Cast<AItemActor>(ActiveActor);
+
+			if(FirstActor != nullptr)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("First Actor is not nullptr"))
+		
+				FActorSpawnParameters SpawnInfo;
+		
+				AItemActor* Bread = GetWorld()->SpawnActor<AItemActor>(FirstActor->GetClass(), this->GetActorLocation(), this->GetActorRotation(), SpawnInfo);
+
+				PhysicsHandle->GrabComponentAtLocation(Bread->Mesh, NAME_None, Bread->GetActorLocation());
+		
+
+			}
+
+
+	}
+
+	
+	}
+
+
+
+	
+	
+
 }
 
 
