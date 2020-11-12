@@ -15,12 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a8f236-0d1c-4a50-bf7f-271e7edd180f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" afterDir="false" />
     </list>
@@ -55,6 +53,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30016583" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -291,6 +291,8 @@
       <workItem from="1604906542883" duration="11635000" />
       <workItem from="1604993665278" duration="8369000" />
       <workItem from="1605006616770" duration="7819000" />
+      <workItem from="1605080286338" duration="8287000" />
+      <workItem from="1605156362289" duration="16799000" />
     </task>
     <servers />
   </component>
@@ -315,29 +317,77 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1605029809367">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1605202091301">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605029809367" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1605029809366">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605202091301" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1605202091300">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1605029809366" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1605029809366">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1605202091300" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1605202091300">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1605029809366" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1605029809367">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1605202091300" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1605202091301">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605029809367" />
-    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604754630257">
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605202091301" />
+    <state width="1237" height="235" key="GridCell.Tab.1.bottom" timestamp="1605190778481">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604754630257" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1604907614585">
+    <state width="1237" height="235" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605190778481" />
+    <state width="1237" height="235" key="GridCell.Tab.1.center" timestamp="1605190778481">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1604907614585" />
+    <state width="1237" height="235" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1605190778481" />
+    <state width="1237" height="235" key="GridCell.Tab.1.left" timestamp="1605190778481">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1605190778481" />
+    <state width="1237" height="235" key="GridCell.Tab.1.right" timestamp="1605190778481">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1605190778481" />
+    <state width="1237" height="235" key="GridCell.Tab.2.bottom" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.2.center" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.2.left" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.2.right" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.3.bottom" timestamp="1605190778483">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.3.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605190778483" />
+    <state width="1237" height="235" key="GridCell.Tab.3.center" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.3.center/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.3.left" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.3.left/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state width="1237" height="235" key="GridCell.Tab.3.right" timestamp="1605190778482">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="235" key="GridCell.Tab.3.right/0.0.1280.689@0.0.1280.689" timestamp="1605190778482" />
+    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605081296436">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1605081296436" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1605196107772">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1605196107772" />
   </component>
 </project>

@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "HorrorAdventures/Actors/ItemActor.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ObjectMacros.h"
+
 #include "PlayerCharacter.generated.h"
 
 class AUnlockedDoor;
@@ -40,7 +44,10 @@ public:
 	UInventoryComponents* Inventory;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-	AActor* ActiveActor;
+	AItemActor* ActiveActor;
+
+
+
 
 
 
@@ -56,7 +63,7 @@ private:
 
 	void AddToInventory();
 
-	void SetActiveItem();
+	void SetActiveItem(AItemActor* ItemToSet);
 
 	UPROPERTY(EditAnywhere)
 	float reach = 50;
@@ -64,8 +71,12 @@ private:
 	UPROPERTY(EditAnywhere)
 	float GrabReach = 50;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
 	USceneComponent* HoldPoint;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USceneComponent* GripPoint;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory",  meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class AItemActor> ItemActor;

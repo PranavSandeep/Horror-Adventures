@@ -21,6 +21,9 @@ APlayerCharacter::APlayerCharacter()
 
 	HoldPoint = CreateDefaultSubobject<USceneComponent>(FName("Hold Point"));
 
+	GripPoint = CreateDefaultSubobject<USceneComponent>(FName("Grip Point"));
+	GripPoint->SetupAttachment(RootComponent);
+
 	
 }
 
@@ -56,7 +59,8 @@ void APlayerCharacter::Tick(float DeltaTime)
 	{
 		if(PhysicsHandle->GrabbedComponent)
 		{
-			PhysicsHandle->SetTargetLocation(LineTraceEnd);
+			PhysicsHandle->SetTargetLocation(GripPoint->GetComponentLocation());
+
 		}
 	}
 
@@ -79,13 +83,15 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Add to inventory", IE_Pressed, this, &APlayerCharacter::AddToInventory);
 
-	PlayerInputComponent->BindAction("Get First Inventory Item", IE_Pressed, this, &APlayerCharacter::SetActiveItem);
+	//PlayerInputComponent->BindAction("Get First Inventory Item", IE_Pressed, this, &APlayerCharacter::SetActiveItem);
+
+	PlayerInputComponent->BindAction("Release", IE_Pressed, this, &APlayerCharacter::Release);
 
 }
 
 void APlayerCharacter::MoveForward(float val)
 {
-	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+	FVector const Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
 	AddMovementInput(Direction, val);
 
 	
@@ -159,12 +165,26 @@ void APlayerCharacter::Release()
 		PhysicsHandle->ReleaseComponent();
 	}
 
-	
+if(Inventory->Inventory.IsValidIndex(0))
+{
+	auto ZeroActor = Inventory->Inventory[0];
+
+	Inventory->Inventory.Remove(ZeroActor);
 }
+	
+}	
+
+		
+
+	
+
+
+	
+
 
 void APlayerCharacter::MoveSideWays(float val)
 {
-	FVector MoveDirection = GetActorRightVector();
+	FVector const MoveDirection = GetActorRightVector();
 
 	AddMovementInput(MoveDirection, val);
 }
@@ -197,9 +217,16 @@ void APlayerCharacter::AddToInventory()
 				{
 					Inventory->AddItem(HitActor);
 
-					AActor* FirstActor = Inventory->Inventory[0];
+					HitActor->Mesh->DestroyComponent();
 
-					UE_LOG(LogTemp, Warning, TEXT("%s"),*FirstActor->GetName())
+					if(Inventory->Inventory.Num() == 1)
+					{
+						SetActiveItem(HitActor);
+
+					}
+
+					
+
 				}
 
 				
@@ -210,41 +237,32 @@ void APlayerCharacter::AddToInventory()
 	}
 }
 
-void APlayerCharacter::SetActiveItem()
+void APlayerCharacter::SetActiveItem(AItemActor* ItemToSet)
 {
-	if(Inventory->Inventory.IsValidIndex(0))
-	{
-		ActiveActor = Inventory->Inventory[0];
-
-		if(ActiveActor != nullptr)
-		{
-			AItemActor* FirstActor = Cast<AItemActor>(ActiveActor);
-
-			if(FirstActor != nullptr)
+	
+			if(ItemToSet != nullptr)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("First Actor is not nullptr"))
 		
 				FActorSpawnParameters SpawnInfo;
 		
-				AItemActor* Bread = GetWorld()->SpawnActor<AItemActor>(FirstActor->GetClass(), this->GetActorLocation(), this->GetActorRotation(), SpawnInfo);
+				AItemActor* SpawnedActor = GetWorld()->SpawnActor<AItemActor>(ItemToSet->GetClass(), GripPoint->GetComponentLocation(),GripPoint->GetComponentRotation(), SpawnInfo);
 
-				PhysicsHandle->GrabComponentAtLocation(Bread->Mesh, NAME_None, Bread->GetActorLocation());
+				ActiveActor = SpawnedActor;
+				
+				PhysicsHandle->GrabComponent(SpawnedActor->Mesh, NAME_None, SpawnedActor->GetActorLocation(), true);
+			}
 		
 
-			}
-
-
-	}
 
 	
-	}
-
-
-
-	
-	
-
 }
+
+
+
+	
+	
+
+
 
 
 
