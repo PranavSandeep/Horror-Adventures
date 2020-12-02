@@ -15,10 +15,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a8f236-0d1c-4a50-bf7f-271e7edd180f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/Material_001.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/Material__BookTexture_psd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/uploads_files_2089221_BookMesh_Cube_003.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/uploads_files_2089221_BookMesh_Plane.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/ItemActors/Book-Test.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/ItemActors/Bread.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Items/Bp_ItemSlotActor1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerControllers/BP+PlayerController.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/SFX/SFX_Burp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Book_Ui/WBP_Book_Test.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Fonts/Shit_Happens_trial_d__.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UI/Fonts/Shit_Happens_trial_d___Font.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Actors/Bread.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/Bread.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/GameModeBases/BP_GameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/GameModeBases/BP_GameModeBase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" afterDir="false" />
@@ -32,6 +51,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/winioctl.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/ApplicationCore/Public/IOS/IOSAppDelegate.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -42,18 +65,26 @@
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.cpp" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Components/InventoryComponents.cpp" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Components/InventoryComponents.h" />
-        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.h" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.cpp" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.cpp" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.h" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jp7QLq1w294gLIurOTtWP7BiCd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -291,6 +322,13 @@
       <workItem from="1604906542883" duration="11635000" />
       <workItem from="1604993665278" duration="8369000" />
       <workItem from="1605006616770" duration="7819000" />
+      <workItem from="1605264324618" duration="3366000" />
+      <workItem from="1605333070614" duration="1856000" />
+      <workItem from="1605350421273" duration="7683000" />
+      <workItem from="1606820775278" duration="515000" />
+      <workItem from="1606833692751" duration="2252000" />
+      <workItem from="1606896054251" duration="4489000" />
+      <workItem from="1606911481986" duration="6755000" />
     </task>
     <servers />
   </component>
@@ -312,29 +350,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1605029809367">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1606924377258">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1605029809367" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1605029809366">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1606924377258">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1605029809366" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1605029809366">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1606924377258">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1605029809366" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1605029809367">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1606924377258">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1605029809367" />
-    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604754630257">
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
+    <state x="316" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606921457637">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="316" y="6" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1604754630257" />
+    <state x="316" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1606921457637" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1606914288178">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1606914288178" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1604907614585">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

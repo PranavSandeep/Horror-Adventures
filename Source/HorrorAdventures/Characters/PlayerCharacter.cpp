@@ -12,6 +12,8 @@
 #include "DrawDebugHelpers.h"
 #include "Components/SceneComponent.h"
 #include "Physics/ImmediatePhysics/ImmediatePhysicsChaos/ImmediatePhysicsCore_Chaos.h"
+#include "Kismet/GameplayStatics.h"
+#include "HorrorAdventures/Actors/ItemSlotActor.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -19,7 +21,11 @@ APlayerCharacter::APlayerCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	HoldPoint = CreateDefaultSubobject<USceneComponent>(FName("Hold Point"));
+	GripPoint = CreateDefaultSubobject<USceneComponent>(FName("Grip Point"));
+	GripPoint->SetupAttachment(this->GetMesh());
+
+	
+	
 
 	
 }
@@ -31,7 +37,7 @@ void APlayerCharacter::BeginPlay()
 
 	PhysicsHandle = FindComponentByClass<UPhysicsHandleComponent>();
 
-	Inventory = FindComponentByClass<UInventoryComponents>();
+	
 	
 }
 
@@ -40,23 +46,11 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector PlayerViewPointLocation;
-	FRotator PlayerViewPointRotation;
-
-	FHitResult Hit;
-
-	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
-
-	FCollisionQueryParams TraceParams = FCollisionQueryParams(TEXT(""), false, GetOwner());
-		
-	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * GrabReach;
-
-
 	if(PhysicsHandle !=nullptr)
 	{
 		if(PhysicsHandle->GrabbedComponent)
 		{
-			PhysicsHandle->SetTargetLocation(LineTraceEnd);
+			PhysicsHandle->SetTargetLocation(GripPoint->GetComponentLocation());
 		}
 	}
 
@@ -79,13 +73,17 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Add to inventory", IE_Pressed, this, &APlayerCharacter::AddToInventory);
 
-	PlayerInputComponent->BindAction("Get First Inventory Item", IE_Pressed, this, &APlayerCharacter::SetActiveItem);
+	PlayerInputComponent->BindAction("Release", IE_Pressed, this, &APlayerCharacter::Release);
+
+	PlayerInputComponent->BindAction("Use Item", IE_Pressed, this, &APlayerCharacter::UseItem);
+
+
 
 }
 
 void APlayerCharacter::MoveForward(float val)
 {
-	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+	FVector const Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
 	AddMovementInput(Direction, val);
 
 	
@@ -154,9 +152,20 @@ void APlayerCharacter::Grab()
 
 void APlayerCharacter::Release()
 {
+
 	if(PhysicsHandle !=nullptr)
 	{
-		PhysicsHandle->ReleaseComponent();
+		if(PhysicsHandle->GrabbedComponent != nullptr)
+		{
+			PhysicsHandle->ReleaseComponent();
+
+			bIsFree = true;
+		}
+
+		
+
+		
+		
 	}
 
 	
@@ -164,14 +173,14 @@ void APlayerCharacter::Release()
 
 void APlayerCharacter::MoveSideWays(float val)
 {
-	FVector MoveDirection = GetActorRightVector();
+	FVector const MoveDirection = GetActorRightVector();
 
 	AddMovementInput(MoveDirection, val);
 }
 
 void APlayerCharacter::AddToInventory()
 {
-	if(Inventory!=nullptr)
+	if(bIsFree)
 	{
 		FVector PlayerViewPointLocation;
 		FRotator PlayerViewPointRotation;
@@ -192,59 +201,114 @@ void APlayerCharacter::AddToInventory()
 
 			if(HitActor != nullptr)
 			{
+				SetActiveItem(HitActor);
 
-				if(Inventory != nullptr)
-				{
-					Inventory->AddItem(HitActor);
+				HitActor->Mesh->DestroyComponent();
 
-					AActor* FirstActor = Inventory->Inventory[0];
+				bIsFree = false;
 
-					UE_LOG(LogTemp, Warning, TEXT("%s"),*FirstActor->GetName())
-				}
-
-				
-				
+					
 			}
+
 				
+				
+		}
+				
+	}
+}
+
+
+void APlayerCharacter::UseItem()
+{
+	if(ActiveActor != nullptr)
+	{
+		AItemActor* ActiveItem = Cast<AItemActor>(ActiveActor);
+
+		if(ActiveItem != nullptr)
+		{
+			ActiveItem->Use(this);
+			ActiveItem->OnUse(this); //BP Implementation
+
+			if(ActiveItem->bShouldBeDestroyedOnUse)
+			{
+				ActiveActor->Destroy();
+
+				bIsFree = true;
+			}
+			
 		}
 	}
 }
 
-void APlayerCharacter::SetActiveItem()
+
+void APlayerCharacter::SetActiveItem(AItemActor* ItemToAdd)
 {
-	if(Inventory->Inventory.IsValidIndex(0))
+
+	if(ItemToAdd != nullptr)
 	{
-		ActiveActor = Inventory->Inventory[0];
+		UE_LOG(LogTemp, Warning, TEXT("First Actor is not nullptr"))
+		
+		FActorSpawnParameters const SpawnInfo;  //const because it wants me to
+		
+		SpawnedActor = GetWorld()->SpawnActor<AItemActor>(ItemToAdd->GetClass(), GripPoint->GetComponentLocation(), GripPoint->GetComponentRotation(), SpawnInfo);
 
-		if(ActiveActor != nullptr)
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *ItemToAdd->Description)
+
+		ActiveActor = SpawnedActor;
+
+		PhysicsHandle->GrabComponent(SpawnedActor->Mesh, NAME_None, SpawnedActor->GetActorLocation(), true);
+		
+
+			
+
+
+	}
+
+	
+	
+
+	
+	}
+
+void APlayerCharacter::AddToInventorySlot()
+{
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
+
+	FHitResult Hit;
+
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
+
+	FCollisionQueryParams TraceParams = FCollisionQueryParams(TEXT(""), false, GetOwner());
+		
+	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * GrabReach;
+	
+	bool bSuccess = GetWorld()->LineTraceSingleByChannel(OUT Hit, PlayerViewPointLocation, LineTraceEnd, ECC_Visibility, TraceParams);
+
+	if(bSuccess)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Success!"))
+
+		AItemActor* SlotActor = Cast<AItemActor>(Hit.Actor);
+
+		if(SlotActor != nullptr)
 		{
-			AItemActor* FirstActor = Cast<AItemActor>(ActiveActor);
+			Slot1->SlotItem = SlotActor;
+		}
 
-			if(FirstActor != nullptr)
-			{
-				UE_LOG(LogTemp, Warning, TEXT("First Actor is not nullptr"))
-		
-				FActorSpawnParameters SpawnInfo;
-		
-				AItemActor* Bread = GetWorld()->SpawnActor<AItemActor>(FirstActor->GetClass(), this->GetActorLocation(), this->GetActorRotation(), SpawnInfo);
-
-				PhysicsHandle->GrabComponentAtLocation(Bread->Mesh, NAME_None, Bread->GetActorLocation());
 		
 
-			}
-
-
+		
+		
 	}
-
-	
-	}
-
-
-
-	
-	
 
 }
+
+
+
+	
+	
+
 
 
 

@@ -76,6 +76,11 @@ DerivedDataCache/*
 #Starter Content because it's too big
 Content/StarterContent/*
 
-#Imported quixel content
+#Imported content
 
-Content/Assets/FoodItemMeshes/*
+Content/Assets/*
+
+#Materials
+
+Content/Materials/*
+

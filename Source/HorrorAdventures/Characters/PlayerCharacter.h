@@ -6,9 +6,11 @@
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
+class AItemActor;
 class AUnlockedDoor;
 class UPhysicsHandleComponent;
 class UInventoryComponents;
+class AItemSlotActor;
 
 UCLASS()
 class HORRORADVENTURES_API APlayerCharacter : public ACharacter
@@ -35,12 +37,16 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Health = 100;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-	UInventoryComponents* Inventory;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 	AActor* ActiveActor;
+
+	AItemActor* SpawnedActor;
+
+	ACharacter* CharacterForInventory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+	AItemSlotActor* Slot1;
 
 
 
@@ -56,7 +62,9 @@ private:
 
 	void AddToInventory();
 
-	void SetActiveItem();
+	void UseItem();
+
+	void SetActiveItem(AItemActor* ItemToAdd);
 
 	UPROPERTY(EditAnywhere)
 	float reach = 50;
@@ -64,13 +72,18 @@ private:
 	UPROPERTY(EditAnywhere)
 	float GrabReach = 50;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent* HoldPoint;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory",  meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<class AItemActor> ItemActor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USceneComponent* GripPoint;
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	bool bIsFree = true;
+
+	
+
+	void AddToInventorySlot();
+
+	
 
 
 

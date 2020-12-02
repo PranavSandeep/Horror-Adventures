@@ -43621,6 +43621,7 @@
     <e p="C:\Users\Pranav Sandeep\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Pranav Sandeep\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_HorrorAdventures.-1222649353.00" t="ExcludeRecursive" />
     <e p="D:\Unreal Projects\HorrorAdventures" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
@@ -43642,6 +43643,8 @@
           <e p="Actors" t="Include">
             <e p="ItemActor.cpp" t="Include" />
             <e p="ItemActor.h" t="Include" />
+            <e p="ItemSlotActor.cpp" t="Include" />
+            <e p="ItemSlotActor.h" t="Include" />
             <e p="UnlockedDoor.cpp" t="Include" />
             <e p="UnlockedDoor.h" t="Include" />
           </e>
@@ -43659,6 +43662,10 @@
           <e p="Item" t="Include">
             <e p="Item.cpp" t="Include" />
             <e p="Item.h" t="Include" />
+          </e>
+          <e p="Items" t="Include">
+            <e p="InventorySlot.cpp" t="Include" />
+            <e p="InventorySlot.h" t="Include" />
           </e>
         </e>
         <e p="HorrorAdventures.Target.cs" t="Include" />

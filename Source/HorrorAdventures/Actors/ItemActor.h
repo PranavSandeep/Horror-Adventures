@@ -40,10 +40,13 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components",meta=(AllowPrivateAccess = "true"))
 	UStaticMeshComponent* Mesh;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Usage")
+	bool bShouldBeDestroyedOnUse;
+
 	
 	
 
-private:
+
 
 	
 	
