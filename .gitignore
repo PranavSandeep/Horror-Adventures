@@ -84,3 +84,10 @@ Content/Assets/*
 
 Content/Materials/*
 
+#Imported Megascans content
+
+Content/Megascans/*
+
+#Houdini engine Stuff
+
+Content/HoudiniEngine/*

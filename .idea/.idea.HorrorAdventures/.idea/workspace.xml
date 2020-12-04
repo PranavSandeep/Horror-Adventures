@@ -15,33 +15,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18a8f236-0d1c-4a50-bf7f-271e7edd180f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/Material_001.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/Material__BookTexture_psd.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/uploads_files_2089221_BookMesh_Cube_003.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Food/uploads_files_2089221_BookMesh_Plane.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/ItemActors/Book-Test.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/ItemActors/Bread.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Items/Bp_ItemSlotActor1.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerControllers/BP+PlayerController.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/SFX/SFX_Burp.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Book_Ui/WBP_Book_Test.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Fonts/Shit_Happens_trial_d__.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Fonts/Shit_Happens_trial_d___Font.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_boolean.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_calculate_occlusion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_curve_instancer.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_delete_small_parts.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_polyreduce.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_set_pivot.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/HoudiniEngine/Tools/Default/he_surface_instancer.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSAssets.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/AO.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Albedo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Metalness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/Roughness.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_mask.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MSTextures/noise_normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_DetailNormalTiling.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Displacement.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Fuzz.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_MapAdjustments.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Tiling.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/Functions/MF_Transmission.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/MSPresets/MS_DefaultMaterial/MS_DefaultMaterial.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Rosso_Levanto_Marble_tgfrfcmc_surface/Albedo_2K_tgfrfcmc.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Rosso_Levanto_Marble_tgfrfcmc_surface/Normal_2K_tgfrfcmc.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Rosso_Levanto_Marble_tgfrfcmc_surface/Rosso_Levanto_Marble_tgfrfcmc_surface_inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Wood_Facade_2x2_M_uftlcebdy_surface/Albedo_2K_uftlcebdy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Wood_Facade_2x2_M_uftlcebdy_surface/Displacement_2K_uftlcebdy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Wood_Facade_2x2_M_uftlcebdy_surface/Normal_2K_uftlcebdy.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Megascans/Surfaces/Wood_Facade_2x2_M_uftlcebdy_surface/Wood_Facade_2x2_M_uftlcebdy_surface_inst.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorAdventures/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Actors/Bread.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/Bread.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Characters/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/GameModeBases/BP_GameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/GameModeBases/BP_GameModeBase.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Book_Ui/WBP_Book_Test.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Book_Ui/WBP_Book_Test.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_HotBar.uasset" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +76,8 @@
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Items/InventorySlot.cpp" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.cpp" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemSlotActor.h" />
-        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Actors/ItemActor.h" />
+        <option value="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.h" />
         <option value="$PROJECT_DIR$/Source/HorrorAdventures/Characters/PlayerCharacter.cpp" />
       </list>
     </option>
@@ -328,7 +335,9 @@
       <workItem from="1606820775278" duration="515000" />
       <workItem from="1606833692751" duration="2252000" />
       <workItem from="1606896054251" duration="4489000" />
-      <workItem from="1606911481986" duration="6755000" />
+      <workItem from="1606911481986" duration="7239000" />
+      <workItem from="1606969039730" duration="1245000" />
+      <workItem from="1606985815843" duration="756000" />
     </task>
     <servers />
   </component>
@@ -354,22 +363,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1606924377258">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1607014873520">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1606924377258">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1607014873520" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1607014873475">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1606924377258">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1607014873475" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1607014873475">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1606924377258">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1607014873475" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1607014873519">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1606924377258" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1607014873519" />
     <state x="316" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606921457637">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
