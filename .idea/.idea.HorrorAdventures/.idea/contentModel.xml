@@ -10101,6 +10101,29 @@
         </e>
       </e>
     </e>
+    <e p="C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\Marketplace\LDAssistant" t="Include">
+      <e p="LDAssistant.uplugin" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="Icon128.png" t="Include" />
+      </e>
+      <e p="Source" t="Include">
+        <e p="LDAssistant" t="Include">
+          <e p="LDAssistant.Build.cs" t="Include" />
+          <e p="Private" t="Include">
+            <e p="LDAssistant.cpp" t="Include" />
+            <e p="LDAssistantCommands.cpp" t="Include" />
+            <e p="LDAssistantStyle.cpp" t="Include" />
+            <e p="OpenNewWindow.cpp" t="Include" />
+          </e>
+          <e p="Public" t="Include">
+            <e p="LDAssistant.h" t="Include" />
+            <e p="LDAssistantCommands.h" t="Include" />
+            <e p="LDAssistantStyle.h" t="Include" />
+            <e p="OpenNewWindow.h" t="Include" />
+          </e>
+        </e>
+      </e>
+    </e>
     <e p="C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\Media\AjaMedia" t="Include">
       <e p="AjaMedia.uplugin" t="Include" />
       <e p="Resources" t="Include">
@@ -43648,7 +43671,25 @@
             <e p="UnlockedDoor.cpp" t="Include" />
             <e p="UnlockedDoor.h" t="Include" />
           </e>
+          <e p="AI" t="Include">
+            <e p="Ai Controllers" t="Include">
+              <e p="EnemyAIController.cpp" t="Include" />
+              <e p="EnemyAIController.h" t="Include" />
+            </e>
+            <e p="BT Sevices" t="Include">
+              <e p="BTService_SetPlayerLocation.cpp" t="Include" />
+              <e p="BTService_SetPlayerLocation.h" t="Include" />
+              <e p="UBTService_PlayerLocationIfSeen.cpp" t="Include" />
+              <e p="UBTService_PlayerLocationIfSeen.h" t="Include" />
+            </e>
+            <e p="BTTasks" t="Include">
+              <e p="BTTask_CheckPlayerLineOfSight.cpp" t="Include" />
+              <e p="BTTask_CheckPlayerLineOfSight.h" t="Include" />
+            </e>
+          </e>
           <e p="Characters" t="Include">
+            <e p="EnemyCharacter.cpp" t="Include" />
+            <e p="EnemyCharacter.h" t="Include" />
             <e p="PlayerCharacter.cpp" t="Include" />
             <e p="PlayerCharacter.h" t="Include" />
           </e>
